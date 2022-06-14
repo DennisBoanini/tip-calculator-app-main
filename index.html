@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- displays site properly based on user's device -->
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+	<title>Frontend Mentor | Tip calculator app</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<div class="title">
+		<p style="margin: 0; letter-spacing: 0.5rem">SPLI</p>
+		<p style="margin: 0; letter-spacing: 0.5rem">TTER</p>
+	</div>
+	<div class="calculator-container">
+		<div class="user-input flex-column space-between">
+			<div class="flex-column">
+				<label class="label" for="bill-value">Bill</label>
+				<input id="bill-value" type="number" placeholder="0" />
+			</div>
+			<div class="tip-amount-buttons">
+				<label class="label">Select Tip %</label>
+				<div id="tip-amounts" class="grid">
+					<button id="tip-5" onclick="updateTipAmount(5)">5%</button>
+					<button id="tip-10" onclick="updateTipAmount(10)">10%</button>
+					<button id="tip-15" onclick="updateTipAmount(15)">15%</button>
+					<button id="tip-25" onclick="updateTipAmount(25)">25%</button>
+					<button id="tip-50" onclick="updateTipAmount(50)">50%</button>
+					<input id="tip-custom" type="number" placeholder="Custom" />
+				</div>
+			</div>
+			<div class="flex-column">
+				<label id="people-label" for="people-value" class="flex-row space-between">
+					<span class="label">Number of People</span>
+				</label>
+				<input id="people-value" type="number" placeholder="0">
+			</div>
+		</div>
+
+		<div class="resume flex-column space-between">
+			<div class="calculated-values">
+				<div class="flex-row space-between">
+					<div>
+						<div class="label">Tip Amount</div>
+						<div class="value">/ person</div>
+					</div>
+					<div id="tip-per-person" class="price-calculated">$0.00</div>
+				</div>
+				<div class="flex-row total-per-person space-between">
+					<div>
+						<div class="label">Total</div>
+						<div class="value">/ person</div>
+					</div>
+					<div id="total-price" class="price-calculated">$0.00</div>
+				</div>
+			</div>
+			<button id="reset-btn" class="reset-btn" type="button">RESET</button>
+		</div>
+	</div>
+
+<div class="attribution">
+	Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+	Coded by <a href="www.linkedin.com/in/dennisboanini">Dennis A. Boanini</a>.
+</div>
+<script src="scripts/index.js"></script>
+</body>
+</html>

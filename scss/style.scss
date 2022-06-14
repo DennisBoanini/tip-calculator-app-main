@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+// VARIABLES
+$Strong_cyan: hsl(172, 67%, 45%);
+$Very_dark_cyan: hsl(183, 100%, 15%);
+$Dark_grayish_cyan: hsl(186, 14%, 43%);
+$Grayish_cyan: hsl(184, 14%, 56%);
+$Light_grayish_cyan: hsl(185, 41%, 84%);
+$Very_light_grayish_cyan: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+
+$fontSize: 24px;
+
+/*GLOBAL STYLES*/
+* {
+  font-family: 'Space Mono', sans-serif;
+  font-size: $fontSize;
+}
+
+body {
+  background-color: hsl(185deg, 41%, 84%);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 10px;
+}
+
+.space-between { justify-content: space-between; }
+
+// BUTTON STYLES
+button {
+  background-color: $Very_dark_cyan;
+  color: $White;
+  border: none;
+}
+
+button.selected {
+  background-color: $Strong_cyan;
+  color: $Very_dark_cyan;
+}
+
+button.reset-btn {
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: $Strong_cyan;
+  color: $Very_dark_cyan;
+  margin: 1.5rem;
+}
+
+// INPUT STYLES
+::placeholder {
+  color: $Grayish_cyan;
+}
+
+input {
+  background-color: $Very_light_grayish_cyan;
+  border: 0;
+  text-align: end;
+  padding-right: 5%;
+  color: $Very_dark_cyan;
+  height: 45px;
+
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 10px;
+  background-size: 12px;
+
+  border-radius: 12px;
+  width: 100%;
+}
+
+input.bill-value {
+  background-image: url(../images/icon-dollar.svg);
+}
+
+input.people-value {
+  background-image: url(../images/icon-person.svg);
+}
+
+input:focus {
+  outline: none !important;
+  border: solid 2px $Strong_cyan;
+  box-shadow: none;
+}
+
+input.error:focus {
+  outline: none !important;
+  border: solid 2px red;
+  box-shadow: none;
+}
+
+// APP STYLES
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  font-size: 11px;
+}
+
+.calculator-container {
+  background-color: $White;
+  width: 70%;
+  height: 40%;
+  padding: 1.3rem;
+  border-radius: 1.3rem;
+  gap: 3rem;
+  margin: 3rem 0;
+
+  display: flex;
+  flex-direction: row;
+
+  .user-input {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 50%;
+
+    .label {
+      color: $Dark_grayish_cyan;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .error-label { color: red; }
+  }
+
+  .resume {
+    background-color: $Very_dark_cyan;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 50%;
+
+    .label {
+      color: $White;
+      font-size: 15px;
+    }
+
+    .value {
+      color: $Grayish_cyan;
+      font-size: 15px;
+    }
+
+    .price-calculated { color: $Strong_cyan; font-size: xx-large; }
+
+    .calculated-values {
+      margin: 1.5rem;
+
+      .total-per-person { margin-top: 2rem; }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .grid {
+    grid-template-columns: 50% 50%;
+  }
+
+  .calculator-container {
+    width: unset;
+    flex-direction: column;
+    height: unset;
+    margin-bottom: 0;
+
+    .tip-amount-buttons { margin: 1.2rem 0; }
+  }
+}
