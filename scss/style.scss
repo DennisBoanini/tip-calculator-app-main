@@ -154,6 +154,7 @@ input.error:focus {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 50%;
+    border-radius: 1rem;
 
     .label {
       color: $White;
