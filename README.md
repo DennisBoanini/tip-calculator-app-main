@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/DennisBoanini/tip-calculator-app-main](https://github.com/DennisBoanini/tip-calculator-app-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://dennisboanini.github.io/tip-calculator-app-main/](https://dennisboanini.github.io/tip-calculator-app-main/)
 
 ## My process
 
