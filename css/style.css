@@ -97,6 +97,12 @@ input.error:focus {
   box-shadow: none;
 }
 
+.title p {
+  margin: 0;
+  letter-spacing: 0.5rem;
+  color: hsl(186deg, 14%, 43%);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;

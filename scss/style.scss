@@ -113,6 +113,13 @@ input.error:focus {
 
 // APP STYLES
 
+.title {
+  p {
+    margin: 0; letter-spacing: 0.5rem;
+    color: $Dark_grayish_cyan;
+  }
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
